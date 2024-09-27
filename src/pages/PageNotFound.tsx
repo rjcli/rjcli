@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 import Button from '../components/Button.tsx';
 import SubHeader from '../components/SubHeader.tsx';
-import { ColoredText } from './About.tsx';
 
 const StyledMain = styled.main`
   display: flex;
@@ -10,6 +9,10 @@ const StyledMain = styled.main`
   justify-content: space-evenly;
   height: 100vh;
   flex-direction: column;
+`;
+
+const ColoredText = styled.span<{ color: string }>`
+  color: var(${(color) => '--color-' + (color ?? 'sky')});
 `;
 
 const StyledSubHeader = styled(SubHeader)`
