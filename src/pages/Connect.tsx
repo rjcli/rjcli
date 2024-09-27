@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaMailBulk, FaPhone } from 'react-icons/fa';
 
 import Copyright from '../components/Copyright.tsx';
 import SubHeader from '../components/SubHeader.tsx';
-import ContactItem from '../components/ContactItem.tsx';
+import ConnectItem from '../components/ConnectItem.tsx';
 import { StyledMain } from './About.tsx';
 
 export const Row = styled.div`
@@ -18,18 +18,18 @@ export const Row = styled.div`
   gap: 2rem;
 `;
 
-const Contact = () => {
+const Connect = () => {
   return (
     <StyledMain>
-      <SubHeader style={{ marginBottom: 0 }}>04 : Contact</SubHeader>
+      <SubHeader style={{ marginBottom: 0 }}>04 : Connect</SubHeader>
       <Row>
-        <ContactItem
+        <ConnectItem
           contactTag='github'
           icon={<FaGithub />}
           title='github.com/rashmiraj513'
           href='https://github.com/rashmiraj513'
         />
-        <ContactItem
+        <ConnectItem
           contactTag='linkedin'
           icon={<FaLinkedin />}
           title='Rashmi Raj'
@@ -37,12 +37,12 @@ const Contact = () => {
         />
       </Row>
       <Row>
-        <ContactItem
+        <ConnectItem
           contactTag='phone'
           icon={<FaPhone />}
           title='Currently Not Available'
         />
-        <ContactItem
+        <ConnectItem
           contactTag='gmail'
           icon={<FaMailBulk />}
           title='rashmiraj7877@gmail.com'
@@ -54,4 +54,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Connect;

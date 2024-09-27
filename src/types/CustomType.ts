@@ -3,7 +3,7 @@ import type { LinkProps } from 'react-router-dom';
 
 export type HeaderLinkProps = {
   to: string;
-  children: ReactNode;
+  label: string;
 } & ComponentPropsWithoutRef<'header'>;
 
 export type SubHeaderProps = {
@@ -36,7 +36,7 @@ export type ButtonProps = ComponentPropsWithoutRef<'button'> &
 
 export type ButtonLinkProps = LinkProps & ButtonBaseProps & { to: string };
 
-export type ContactItemProps = {
+export type ConnectItemProps = {
   contactTag: string;
   title: string;
   icon: ReactElement;

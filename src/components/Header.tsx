@@ -62,7 +62,7 @@ const Header: FC = () => {
     { label: '01 : Experiences', to: '/experiences' },
     { label: '02 : Work', to: '/work' },
     { label: '03 : S&A', to: '/skills' },
-    { label: '04 : Contact', to: '/contact' },
+    { label: '04 : Connect', to: '/connect' },
   ];
 
   const handleToggleSidebar = (): void => {
@@ -80,7 +80,7 @@ const Header: FC = () => {
                   <MdCancel size='3rem' className='menu-button' />
                   {headerItems.map((item, index) => (
                     <li key={index}>
-                      <HeaderLink to={item.to}>{item.label}</HeaderLink>
+                      <HeaderLink to={item.to} label={item.label} />
                     </li>
                   ))}
                 </MobileNav>
@@ -97,7 +97,7 @@ const Header: FC = () => {
           <Logo>
             {headerItems.map((item, index) => (
               <li key={index}>
-                <HeaderLink to={item.to}>{item.label}</HeaderLink>
+                <HeaderLink to={item.to} label={item.label} />
               </li>
             ))}
           </Logo>

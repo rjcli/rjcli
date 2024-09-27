@@ -9,14 +9,14 @@ const Experiences = () => {
       date: 'Aug 2022 - Nov 2022',
       title: 'Intern at Nagarro',
       description:
-        'As an intern at Nagarro, I dived into basics of web development, Angular, NodeJS, and DotNet development!',
+        'Dived into basics of web development, Angular, NodeJS, and DotNet development!',
       color: '#41516c',
     },
     {
       date: 'Dec 2022 - July 2023',
       title: 'Associate Engineer at Nagarro',
       description:
-        'Led cross-functional collaboration for a 15% performance boost in system usability; showcased expertise by integrating packages, APIs, and UI components while upgrading NodeJS and Angular versions.',
+        'Worked on cross-functional collaboration for a 15% performance boost in system usability; showcased expertise by integrating packages, APIs, and UI components while upgrading NodeJS and Angular versions.',
       color: '#fbca3e',
     },
     {

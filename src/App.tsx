@@ -10,7 +10,7 @@ const About = lazy(() => import('./pages/About.tsx'));
 const Experiences = lazy(() => import('./pages/Experiences.tsx'));
 const Work = lazy(() => import('./pages/Work.tsx'));
 const Skills = lazy(() => import('./pages/Skills.tsx'));
-const Contact = lazy(() => import('./pages/Contact.tsx'));
+const Connect = lazy(() => import('./pages/Connect.tsx'));
 const PageNotFound = lazy(() => import('./pages/PageNotFound.tsx'));
 
 const App: FC = () => {
@@ -26,7 +26,7 @@ const App: FC = () => {
             <Route path='experiences' element={<Experiences />} />
             <Route path='work' element={<Work />} />
             <Route path='skills' element={<Skills />} />
-            <Route path='contact' element={<Contact />} />
+            <Route path='connect' element={<Connect />} />
           </Route>
           <Route path='*' element={<PageNotFound />} />
         </Routes>

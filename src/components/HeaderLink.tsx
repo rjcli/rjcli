@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import { FC } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 
 import { HeaderLinkProps } from '../types/CustomType.ts';
 
-const StyledHeaderLink = styled(NavLink)`
+const StyledHeaderLink = styled(NavLink)<{ $isActive: boolean }>`
   font-family: 'Roboto', sans-serif;
-  color: var(--color-gray-4);
+  color: ${({ $isActive }) => `var(--color-${$isActive ? 'sky' : 'gray-4'})`};
   text-decoration: none;
   letter-spacing: 1px;
   font-weight: 200;
@@ -15,14 +16,22 @@ const StyledHeaderLink = styled(NavLink)`
   &:hover {
     color: var(--color-sky);
   }
-
-  &.active {
-    color: var(--color-gray-4);
-  }
 `;
 
-const HeaderLink = ({ to, children }: HeaderLinkProps) => {
-  return <StyledHeaderLink to={to}>{children}</StyledHeaderLink>;
+const HeaderLink: FC<HeaderLinkProps> = ({ to, label }) => {
+  const { pathname } = useLocation();
+
+  const routeFromLabel = label.endsWith('S&A')
+    ? 'skills'
+    : label.slice(5).toLowerCase();
+
+  const isActive = routeFromLabel === pathname.slice(1);
+
+  return (
+    <StyledHeaderLink $isActive={isActive} to={to}>
+      {label}
+    </StyledHeaderLink>
+  );
 };
 
 export default HeaderLink;

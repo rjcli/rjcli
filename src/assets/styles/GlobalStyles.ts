@@ -58,6 +58,8 @@ const GlobalStyle = createGlobalStyle`
     --color-cyan: #eaafc8;
     --color-sky: #16eefc;
     --color-background: #212121;
+    --color-animation-1: #1e90ff;
+    --color-animation-2: #fff000;
 
     --backdrop-color: rgba(255, 255, 255, 0.1);
 

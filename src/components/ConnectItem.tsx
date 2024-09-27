@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { type FC } from 'react';
 
-import { ContactItemProps } from '../types/CustomType.ts';
+import { ConnectItemProps } from '../types/CustomType.ts';
 
-const ContactDiv = styled.div`
+const ConnectDiv = styled.div`
   margin: 2rem 0;
   width: 50%;
   @media (max-width: 908px) {
@@ -34,9 +35,14 @@ const Icon = styled.div`
   text-align: center;
 `;
 
-const ContactItem = ({ contactTag, title, icon, href }: ContactItemProps) => {
+const ConnectItem: FC<ConnectItemProps> = ({
+  contactTag,
+  title,
+  icon,
+  href,
+}) => {
   return (
-    <ContactDiv>
+    <ConnectDiv>
       <Icon className={`${contactTag === 'phone' ? 'rotate-icon' : ''}`}>
         {icon}
       </Icon>
@@ -47,8 +53,8 @@ const ContactItem = ({ contactTag, title, icon, href }: ContactItemProps) => {
       >
         {title}
       </StyledHref>
-    </ContactDiv>
+    </ConnectDiv>
   );
 };
 
-export default ContactItem;
+export default ConnectItem;
