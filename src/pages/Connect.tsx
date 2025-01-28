@@ -26,8 +26,8 @@ const Connect = () => {
         <ConnectItem
           contactTag='github'
           icon={<FaGithub />}
-          title='github.com/rashmiraj513'
-          href='https://github.com/rashmiraj513'
+          title='github.com/rjcli'
+          href='https://github.com/rjcli'
         />
         <ConnectItem
           contactTag='linkedin'
