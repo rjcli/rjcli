@@ -61,6 +61,8 @@ const GlobalStyle = createGlobalStyle`
     --color-animation-1: #1e90ff;
     --color-animation-2: #fff000;
 
+    --color-resume-bg: #0056b3;
+
     --backdrop-color: rgba(255, 255, 255, 0.1);
 
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);

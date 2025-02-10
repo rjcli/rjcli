@@ -21,7 +21,7 @@ const MobileNav = styled.ul<{ $show: boolean }>`
   padding: 4rem 3rem;
   backdrop-filter: blur(${({ $show }) => ($show ? '2rem' : 0)});
   -webkit-backdrop-filter: blur(${({ $show }) => ($show ? '2rem' : 0)});
-  z-index: 1;
+  z-index: 999;
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
   list-style: none;
   display: ${({ $show }) => ($show ? 'flex' : 'block')};
@@ -71,7 +71,7 @@ const Header: FC = () => {
 
   return (
     <header className='m-2'>
-      {isSmallScreen && (
+      {isSmallScreen ? (
         <ul>
           <li onClick={handleToggleSidebar} className='menu-button'>
             {isSidebarVisible ? (
@@ -88,9 +88,7 @@ const Header: FC = () => {
             )}
           </li>
         </ul>
-      )}
-
-      {!isSmallScreen && (
+      ) : (
         <StyledNav>
           <Logo>
             {headerItems.map((item, index) => (
