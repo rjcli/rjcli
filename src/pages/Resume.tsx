@@ -30,7 +30,7 @@ const Resume: FC = () => {
 
     window.addEventListener('resize', handleResize);
 
-    return (): void => {
+    return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);

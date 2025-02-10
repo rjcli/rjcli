@@ -11,8 +11,9 @@ const StyledButton = styled.button`
   background-color: var(--color-resume-bg);
   color: var(--color-grey-0);
   border: none;
-  border-radius: 5px;
   cursor: pointer;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
   font-size: 16px;
   z-index: 99;
 

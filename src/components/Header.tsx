@@ -28,7 +28,7 @@ const MobileNav = styled.ul<{ $show: boolean }>`
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  color: var(--color-sky) !important;
+  background-color: var(--color-absolute-black);
 `;
 
 const Logo = styled.ul`
@@ -52,7 +52,7 @@ const Header: FC = () => {
 
     window.addEventListener('resize', handleResize);
 
-    return (): void => {
+    return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
