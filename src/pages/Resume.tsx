@@ -1,4 +1,4 @@
-import { type FC, useState } from 'react';
+import { type FC, useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 import SubHeader from '../components/SubHeader.tsx';
@@ -9,16 +9,31 @@ const StyledFrame = styled.iframe<{
   $smallScreen: boolean;
 }>`
   width: ${({ $smallScreen }) => ($smallScreen ? '100%' : '70%')};
-  display: block;
   margin: auto;
   border: none;
-  height: ${({ $smallScreen }) => ($smallScreen ? '400px' : '600px')};
+  height: ${({ $smallScreen }) => ($smallScreen ? '550px' : '600px')};
   margin-bottom: 5rem;
   display: ${({ $showResume }) => ($showResume ? 'none' : 'block')};
 `;
 
 const Resume: FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
+
+  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(
+    window.innerWidth <= 768,
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return (): void => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const handleLoad = () => {
     setLoading(false);
@@ -37,7 +52,7 @@ const Resume: FC = () => {
         title='Resume'
         onLoad={handleLoad}
         $showResume={loading}
-        $smallScreen={window.innerWidth < 768}
+        $smallScreen={isSmallScreen}
       ></StyledFrame>
     </div>
   );
