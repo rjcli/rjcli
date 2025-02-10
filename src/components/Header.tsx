@@ -1,10 +1,11 @@
-import { FC, useEffect, useState } from 'react';
+import { type FC, useState } from 'react';
 import styled from 'styled-components';
 import { FiAlignRight } from 'react-icons/fi';
 import { MdCancel } from 'react-icons/md';
 
 import HeaderLink from './HeaderLink.tsx';
 import { HeaderItemType } from '../types/CustomType.ts';
+import { useScreenSize } from '../context/useScreenSize.ts';
 
 const StyledNav = styled.nav`
   display: flex;
@@ -41,21 +42,7 @@ const Logo = styled.ul`
 
 const Header: FC = () => {
   const [isSidebarVisible, setSidebarVisible] = useState<boolean>(false);
-  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(
-    window.innerWidth <= 768,
-  );
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 768);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  const { isSmallScreen } = useScreenSize();
 
   const headerItems: HeaderItemType[] = [
     { label: '00 : About', to: '/' },

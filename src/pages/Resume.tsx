@@ -1,8 +1,9 @@
-import { type FC, useState, useEffect } from 'react';
+import { type FC, useState } from 'react';
 import styled from 'styled-components';
 
 import SubHeader from '../components/SubHeader.tsx';
 import Spinner from '../components/Spinner.tsx';
+import { useScreenSize } from '../context/useScreenSize.ts';
 
 const StyledFrame = styled.iframe<{
   $showResume: boolean;
@@ -18,22 +19,7 @@ const StyledFrame = styled.iframe<{
 
 const Resume: FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
-
-  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(
-    window.innerWidth <= 768,
-  );
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 768);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  const { isSmallScreen } = useScreenSize();
 
   const handleLoad = () => {
     setLoading(false);

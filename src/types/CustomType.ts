@@ -81,3 +81,11 @@ export interface HeaderItemType {
   label: string;
   to: string;
 }
+
+export interface ScreenSizeContextProps {
+  isSmallScreen: boolean;
+}
+
+export interface ScreenSizeProviderProps {
+  children: ReactNode;
+}
