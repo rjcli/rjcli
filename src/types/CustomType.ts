@@ -1,73 +1,83 @@
 import type { ComponentPropsWithoutRef, ReactElement, ReactNode } from 'react';
 import type { LinkProps } from 'react-router-dom';
 
-export type HeaderLinkProps = {
+export interface HeaderLinkProps extends ComponentPropsWithoutRef<'header'> {
   to: string;
   label: string;
-} & ComponentPropsWithoutRef<'header'>;
+}
 
-export type SubHeaderProps = {
+export interface SubHeaderProps extends ComponentPropsWithoutRef<'div'> {
   isCentered?: boolean;
   children: ReactNode;
-} & ComponentPropsWithoutRef<'div'>;
+}
 
-export type ExperienceObj = {
+export interface TimelineObj {
   date: string;
   title: string;
-  description: string;
   color: string;
-};
+  description: string[];
+}
 
-export type TimelineProps = {
-  experiences: ExperienceObj[];
-};
+export interface TimelineProps {
+  experiences: TimelineObj[];
+}
 
-export type TimelineDateProps = {
+export interface TimelineDateProps {
   color?: string;
-};
+}
 
-type ButtonBaseProps = {
+interface ButtonBaseProps {
   children: ReactNode;
   textOnly?: boolean;
-};
+}
 
-export type ButtonProps = ComponentPropsWithoutRef<'button'> &
-  ButtonBaseProps & { to?: never };
+export interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
+  to?: never;
+  children: ReactNode;
+  textOnly?: boolean;
+}
 
-export type ButtonLinkProps = LinkProps & ButtonBaseProps & { to: string };
+interface CombinedLinkButtonProps
+  extends Omit<LinkProps, 'children'>,
+    Omit<ButtonBaseProps, 'children'> {}
 
-export type ConnectItemProps = {
+export interface ButtonLinkProps extends CombinedLinkButtonProps {
+  to: string;
+  children: ReactNode;
+}
+
+export interface ConnectItemProps {
   contactTag: string;
   title: string;
   icon: ReactElement;
   href?: string;
-};
+}
 
-export type RowProps = {
+export interface RowProps {
   children: ReactNode;
-};
+}
 
-export type WorkItemProps = {
+export interface WorkItemProps {
   title: string;
   subtitle: string;
   description: string;
   link: string;
-};
+}
 
-export type StyleDivProps = {
+export interface StyleDivProps {
   collapsed: boolean;
-};
+}
 
-export type SkillObj = {
+export interface SkillObj {
   title: string;
   icon: ReactElement;
-};
+}
 
-export type SkillListProps = {
+export interface SkillListProps {
   skills: SkillObj[];
-};
+}
 
-export type HeaderItemType = {
+export interface HeaderItemType {
   label: string;
   to: string;
-};
+}

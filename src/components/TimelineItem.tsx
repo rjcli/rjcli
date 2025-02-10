@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import type { FC } from 'react';
 
-import { ExperienceObj as TimelineItemProps } from '../types/CustomType.ts';
+import { TimelineObj as TimelineItemProps } from '../types/CustomType.ts';
 
 const TimelineListItem = styled.li`
   grid-column: 2;
@@ -134,21 +135,39 @@ const TimelineDescription = styled(TimelineContent)`
     z-index: -1;
     bottom: 0.4rem;
   }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 1.6rem;
+  }
+
+  li {
+    color: var(--color-gray-3);
+    margin-bottom: 0.8rem;
+  }
 `;
 
-const TimelineItem = ({
+const TimelineItem: FC<TimelineItemProps> = ({
   date,
   title,
   description,
   color,
-}: TimelineItemProps) => {
+}) => {
   return (
     <TimelineListItem>
       <TimelineDate color={color} className='date'>
         {date}
       </TimelineDate>
+
       <TimelineTitle>{title}</TimelineTitle>
-      <TimelineDescription>{description}</TimelineDescription>
+
+      <TimelineDescription>
+        <ul>
+          {description.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      </TimelineDescription>
     </TimelineListItem>
   );
 };

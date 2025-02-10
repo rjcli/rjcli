@@ -11,10 +11,6 @@ const StyledMain = styled.main`
   flex-direction: column;
 `;
 
-const ColoredText = styled.span<{ color: string }>`
-  color: var(${(color) => '--color-' + (color ?? 'sky')});
-`;
-
 const StyledSubHeader = styled(SubHeader)`
   font-size: 2rem;
 `;
@@ -30,9 +26,7 @@ const PageNotFound = () => {
         The Route you request doesn't exist. <br />
         Looks like you are lost. <br />
       </StyledSubHeader>
-      <StyledSubHeader>
-        <ColoredText color='red'>404 Error</ColoredText> <br />
-      </StyledSubHeader>
+
       <Button to='about'>Back to Home</Button>
     </StyledMain>
   );

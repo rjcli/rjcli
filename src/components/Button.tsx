@@ -27,6 +27,7 @@ const StyledButton = styled.button`
 const Button = (props: ButtonProps | ButtonLinkProps) => {
   if (isRouterLink(props)) {
     const { children, textOnly, ...otherProps } = props;
+
     return (
       <StyledButton>
         <Link
@@ -38,7 +39,9 @@ const Button = (props: ButtonProps | ButtonLinkProps) => {
       </StyledButton>
     );
   }
+
   const { children, textOnly, ...otherProps } = props;
+
   return (
     <StyledButton
       className={`button ${textOnly ? 'button--text-only' : ''}`}

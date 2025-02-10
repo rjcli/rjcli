@@ -75,16 +75,14 @@ const Header: FC = () => {
         <ul>
           <li onClick={handleToggleSidebar} className='menu-button'>
             {isSidebarVisible ? (
-              <>
-                <MobileNav $show={isSidebarVisible}>
-                  <MdCancel size='3rem' className='menu-button' />
-                  {headerItems.map((item, index) => (
-                    <li key={index}>
-                      <HeaderLink to={item.to} label={item.label} />
-                    </li>
-                  ))}
-                </MobileNav>
-              </>
+              <MobileNav $show={isSidebarVisible}>
+                <MdCancel size='3rem' className='menu-button' />
+                {headerItems.map((item, index) => (
+                  <li key={index}>
+                    <HeaderLink to={item.to} label={item.label} />
+                  </li>
+                ))}
+              </MobileNav>
             ) : (
               <FiAlignRight size='3rem' />
             )}

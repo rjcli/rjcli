@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useState } from 'react';
 import { HiMiniChevronDown, HiMiniChevronUp } from 'react-icons/hi2';
+import type { FC } from 'react';
 
 import { WorkItemProps } from '../types/CustomType.ts';
 
@@ -82,7 +83,12 @@ const WorkItemDescription = styled.p`
   }
 `;
 
-const WorkItem = ({ title, subtitle, description, link }: WorkItemProps) => {
+const WorkItem: FC<WorkItemProps> = ({
+  title,
+  subtitle,
+  description,
+  link,
+}) => {
   const [collapsed, setCollapsed] = useState<boolean>(false);
 
   const toggleCollapse = () => {

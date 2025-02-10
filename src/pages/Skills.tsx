@@ -14,41 +14,11 @@ import { LiaNode } from 'react-icons/lia';
 import SubHeader from '../components/SubHeader.tsx';
 import Timeline from '../components/Timeline.tsx';
 import SkillList from '../components/SkillList.tsx';
-import {
-  ExperienceObj as AcademicsObj,
-  SkillObj,
-} from '../types/CustomType.ts';
+import { SkillObj } from '../types/CustomType.ts';
 import { StyledMain } from './About.tsx';
+import { academics } from '../assets/data/db.ts';
 
 const Skills = () => {
-  const academics: AcademicsObj[] = [
-    {
-      date: '2014 - 2015',
-      title: 'Higher Secondary',
-      description: 'Upgraded High School Lodipur, Sheikhpura, Bihar.',
-      color: '#41516c',
-    },
-    {
-      date: '2015 - 2017',
-      title: 'Senior Secondary',
-      description: 'Rajeshwar Lal College, Alinagar, Nalanda, Bihar.',
-      color: '#fbca3e',
-    },
-    {
-      date: '2018 - 2022',
-      title: 'Bachelors in Computer Science & Engineering',
-      description:
-        'Beant College of Engineering and Technology, Gurdaspur, Punjab.',
-      color: '#e24a68',
-    },
-    {
-      date: '2023 - Present',
-      title: 'Master in Computer Science & Engineering',
-      description: 'Indian Institute of Technology, Patna, Bihar.',
-      color: '#1b5f8c',
-    },
-  ];
-
   const skills: SkillObj[] = [
     { title: 'C', icon: <FaC /> },
     { title: 'C++', icon: <TbBrandCpp /> },

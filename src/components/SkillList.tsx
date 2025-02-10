@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import type { FC } from 'react';
 
 import { SkillListProps } from '../types/CustomType.ts';
 
@@ -42,7 +43,7 @@ const StyledPara = styled.p`
   }
 `;
 
-const SkillList = ({ skills }: SkillListProps) => {
+const SkillList: FC<SkillListProps> = ({ skills }) => {
   return (
     <StyledList>
       {skills.map((skill) => (

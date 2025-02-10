@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import type { FC } from 'react';
 
 import { TimelineProps } from '../types/CustomType.ts';
 import TimelineItem from './TimelineItem.tsx';
@@ -38,7 +39,7 @@ const TimelineList = styled.ul`
   }
 `;
 
-const Timeline = ({ experiences }: TimelineProps) => {
+const Timeline: FC<TimelineProps> = ({ experiences }) => {
   return (
     <TimelineDiv>
       <TimelineList>

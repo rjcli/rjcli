@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 import SubHeader from '../components/SubHeader.tsx';
 import WorkItem from '../components/WorkItem.tsx';
-import { WorkItemProps } from '../types/CustomType.tsx';
 import { StyledMain } from './About.tsx';
+import { workItems } from '../assets/data/db.ts';
 
 const StyledPara = styled.p`
   font-size: 1.5rem;
@@ -21,38 +21,6 @@ const StyledPara = styled.p`
 `;
 
 const Work = () => {
-  const workItems: WorkItemProps[] = [
-    {
-      title: 'Malware Detection using ML',
-      subtitle: 'A Working Machine Learning Modal for Malware Detection',
-      description:
-        'A Machine Learning model for Malware Detection, built using scikit-learn. This model uses various ML algorithms like Simple KNN, Random Forest, Decision Tree, XGBoost and finally selects the best model among these algorithms according to the training accuracy.',
-      link: 'https://github.com/rjcli/Malware_Detection_Using_ML',
-    },
-    {
-      title: 'NoteTaker Full Stack Website',
-      subtitle: 'A Full Stack Website for Note Taking',
-      description:
-        'A full-stack website created for note taking purposes. For front-end, HTML, CSS, and JS is used and for back-end, Express and NodeJS is used. For storing the notes, MongoDB is used. Also have advance features like searching a note using Title or, Body content or, according to the date created.',
-      link: 'https://github.com/rjcli/toDoList-homepage',
-    },
-    {
-      title: 'Portfolio Website using React TSX',
-      subtitle:
-        'A Portfolio Website to showcase my skills to employers and collaborators',
-      description:
-        'This portfolio website is created using React TSX. The purpose of this website is to showcase my projects, skills, and experiences to potential employers, clients, and collaborators.',
-      link: 'https://github.com/rjcli/rjcli',
-    },
-    {
-      title: 'Basic Result Management System',
-      subtitle: 'A Basic Result Management System with Login and See Results',
-      description:
-        'This basic result management system is created using Angular and NodeJS. It provides login options for admins to add results and provides only search options students.',
-      link: 'https://github.com/rjcli/result-management-system-angular',
-    },
-  ];
-
   return (
     <StyledMain>
       <SubHeader>02 : Work</SubHeader>

@@ -72,6 +72,11 @@ const GlobalStyle = createGlobalStyle`
     --border-radius-md: 7px;
     --border-radius-lg: 9px;
 
+    --color-nagarro-trainee: #41516c,
+    --color-nagarro-engineer: #fbca3e,
+    --color-intel-intern: #e24a68,
+
+
     /* For dark mode */
     --image-grayscale: 0;
     --image-opacity: 100%;
