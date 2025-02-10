@@ -61,7 +61,8 @@ const GlobalStyle = createGlobalStyle`
     --color-animation-1: #1e90ff;
     --color-animation-2: #fff000;
 
-    --color-resume-bg: #0056b3;
+    --color-resume-bg: #007bff;
+    --color-resume-bg-hover: #1056fc;
 
     --backdrop-color: rgba(255, 255, 255, 0.1);
 
@@ -77,7 +78,6 @@ const GlobalStyle = createGlobalStyle`
     --color-nagarro-trainee: #41516c,
     --color-nagarro-engineer: #fbca3e,
     --color-intel-intern: #e24a68,
-
 
     /* For dark mode */
     --image-grayscale: 0;

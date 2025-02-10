@@ -8,7 +8,7 @@ const StyledButton = styled.button`
   bottom: 20px;
   right: 20px;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: var(--color-resume-bg);
   color: var(--color-grey-0);
   border: none;
   border-radius: 5px;
@@ -17,7 +17,7 @@ const StyledButton = styled.button`
   z-index: 99;
 
   &:hover {
-    background-color: var(--color-resume-bg);
+    background-color: var(--color-resume-bg-hover);
   }
 `;
 const Root = () => {
