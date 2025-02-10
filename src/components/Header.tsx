@@ -46,7 +46,7 @@ const Header: FC = () => {
   );
 
   useEffect(() => {
-    const handleResize = (): void => {
+    const handleResize = () => {
       setIsSmallScreen(window.innerWidth <= 768);
     };
 
