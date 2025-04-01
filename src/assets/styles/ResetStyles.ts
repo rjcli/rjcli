@@ -46,7 +46,6 @@ const ResetStyle = createGlobalStyle`
 
   a {
     background-color: transparent;
-    -webkit-text-decoration-skip: objects;
   }
 
   a:active,
@@ -138,10 +137,6 @@ const ResetStyle = createGlobalStyle`
   button,
   select {
     text-transform: none;
-  }
-
-  button, html [type="button"], [type="reset"], [type="submit"] {
-    -webkit-appearance: button;
   }
 
   button::-moz-focus-inner,

@@ -7,7 +7,7 @@ const ConnectDiv = styled.div`
   margin: 2rem 0;
   width: 50%;
   padding: 2rem 0;
-  box-shadow: 0 0 3.2rem var(--color-absolute-black);
+  box-shadow: 0 0.1rem 1rem var(--color-absolute-black);
   border-radius: 1rem;
 
   @media (max-width: 908px) {
@@ -18,7 +18,7 @@ const ConnectDiv = styled.div`
 const StyledHref = styled.a`
   font-size: 2rem;
   letter-spacing: 1px;
-  color: var(--color-grey-400);
+  color: var(--color-grey-300);
   display: block;
   text-align: center;
 

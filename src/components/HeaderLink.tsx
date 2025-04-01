@@ -6,7 +6,7 @@ import { HeaderLinkProps } from '../types/CustomType.ts';
 
 const StyledHeaderLink = styled(NavLink)<{ $isActive: boolean }>`
   font-family: 'Roboto', sans-serif;
-  color: ${({ $isActive }) => `var(--color-${$isActive ? 'sky' : 'gray-4'})`};
+  color: ${({ $isActive }) => `var(--color-${$isActive ? 'sky' : 'gray-0'})`};
   text-decoration: none;
   letter-spacing: 1px;
   font-weight: 200;

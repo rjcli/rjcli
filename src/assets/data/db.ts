@@ -49,8 +49,8 @@ export const experiences: ExperienceObj[] = [
     date: 'Dec 2022 - July 2023',
     title: 'Associate Engineer at Nagarro',
     description: [
-      'Upgraded a legacy enterprise application, optimizing system performance and usability by 15%.',
-      'Modernized Node.js and Angular frameworks, streamlining API integration and improving UI responsiveness by 20%.',
+      'Upgraded a legacy enterprise application, optimizing system performance and usability.',
+      'Modernized Node.js and Angular frameworks, streamlining API integration and improving UI responsiveness.',
     ],
     color: '#fbca3e',
   },
@@ -58,9 +58,9 @@ export const experiences: ExperienceObj[] = [
     date: 'June 2024 - May 2025',
     title: 'Intern at Intel',
     description: [
-      'Enhanced front-end functionality for a mission-critical AI project by optimizing the existing UI for better performance, improving efficiency by 30%, ensuring seamless user interactions using React.',
+      'Enhanced front-end functionality for a mission-critical AI project by optimizing the existing UI for better performance, improving efficiency, ensuring seamless user interactions using React.',
       'Developed a new UI from scratch entirely by myself, integrating modern UI/UX principles, and wrote comprehensive unit test cases using Vitest, achieving 75% test coverage, which met the acceptance criteria set by the team.',
-      'Contributed to backend integration efforts by collaborating with engineers to debug, optimize, and enhance API interactions, reducing system latency by 15%.',
+      'Contributed to backend integration efforts by collaborating with engineers to debug, optimize, and enhance API interactions, reducing system latency.',
     ],
     color: '#e24a68',
   },
