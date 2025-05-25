@@ -6,16 +6,10 @@ import {
 
 export const academics: AcademicsObj[] = [
   {
-    date: '2014 - 2015',
-    title: 'Higher Secondary',
-    description: ['Upgraded High School Lodipur, Sheikhpura, Bihar.'],
-    color: '#41516c',
-  },
-  {
-    date: '2015 - 2017',
-    title: 'Senior Secondary',
-    description: ['Rajeshwar Lal College, Alinagar, Nalanda, Bihar.'],
-    color: '#fbca3e',
+    date: '2023 - Present',
+    title: 'Master in Computer Science & Engineering',
+    description: ['Indian Institute of Technology, Patna, Bihar.'],
+    color: '#1b5f8c',
   },
   {
     date: '2018 - 2022',
@@ -26,24 +20,29 @@ export const academics: AcademicsObj[] = [
     color: '#e24a68',
   },
   {
-    date: '2023 - Present',
-    title: 'Master in Computer Science & Engineering',
-    description: ['Indian Institute of Technology, Patna, Bihar.'],
-    color: '#1b5f8c',
+    date: '2015 - 2017',
+    title: 'Senior Secondary',
+    description: ['Rajeshwar Lal College, Alinagar, Nalanda, Bihar.'],
+    color: '#fbca3e',
+  },
+  {
+    date: '2014 - 2015',
+    title: 'Higher Secondary',
+    description: ['Upgraded High School Lodipur, Sheikhpura, Bihar.'],
+    color: '#41516c',
   },
 ];
 
 export const experiences: ExperienceObj[] = [
   {
-    date: 'Aug 2022 - Nov 2022',
-    title: 'Trainee at Nagarro',
+    date: 'June 2024 - May 2025',
+    title: 'Intern at Intel',
     description: [
-      'Mastered the fundamentals of web development with HTML, CSS, and JavaScript.',
-      'Gained expertise in modern frontend frameworks like Angular and React.',
-      'Developed proficiency in backend technologies including .NET and C#, and NodeJS.',
-      'Learned to build robust web applications using the MVC architectural pattern.',
+      'Enhanced front-end functionality for a mission-critical AI project by optimizing the existing UI for better performance, improving efficiency, ensuring seamless user interactions using React.',
+      'Developed a new UI from scratch entirely by myself, integrating modern UI/UX principles, and wrote comprehensive unit test cases using Vitest, achieving 75% test coverage, which met the acceptance criteria set by the team.',
+      'Contributed to backend integration efforts by collaborating with engineers to debug, optimize, and enhance API interactions, reducing system latency.',
     ],
-    color: '#41516c',
+    color: '#e24a68',
   },
   {
     date: 'Dec 2022 - July 2023',
@@ -55,14 +54,15 @@ export const experiences: ExperienceObj[] = [
     color: '#fbca3e',
   },
   {
-    date: 'June 2024 - May 2025',
-    title: 'Intern at Intel',
+    date: 'Aug 2022 - Nov 2022',
+    title: 'Trainee at Nagarro',
     description: [
-      'Enhanced front-end functionality for a mission-critical AI project by optimizing the existing UI for better performance, improving efficiency, ensuring seamless user interactions using React.',
-      'Developed a new UI from scratch entirely by myself, integrating modern UI/UX principles, and wrote comprehensive unit test cases using Vitest, achieving 75% test coverage, which met the acceptance criteria set by the team.',
-      'Contributed to backend integration efforts by collaborating with engineers to debug, optimize, and enhance API interactions, reducing system latency.',
+      'Mastered the fundamentals of web development with HTML, CSS, and JavaScript.',
+      'Gained expertise in modern frontend frameworks like Angular and React.',
+      'Developed proficiency in backend technologies including .NET and C#, and NodeJS.',
+      'Learned to build robust web applications using the MVC architectural pattern.',
     ],
-    color: '#e24a68',
+    color: '#41516c',
   },
 ];
 
