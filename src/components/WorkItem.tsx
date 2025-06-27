@@ -111,7 +111,7 @@ const WorkItem: FC<WorkItemProps> = ({
           <WorkItemSubtitle>{subtitle}</WorkItemSubtitle>
           <WorkItemDescription>{description}</WorkItemDescription>
           <ViewLink>
-            <a href={link} target='_blank'>
+            <a href={link} target='_blank' rel='noreferrer'>
               View on GitHub
             </a>
           </ViewLink>

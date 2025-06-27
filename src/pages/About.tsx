@@ -78,25 +78,26 @@ const About = () => {
       </SubHeader>
 
       <StyledPara>
-        I'm currently an <HighlightedText>SDE Intern at Intel</HighlightedText>{' '}
-        and pursuing{' '}
+        I&apos;m an <HighlightedText>Ex-SDE Intern at Intel</HighlightedText>{' '}
+        and completed{' '}
         <HighlightedText>
-          Master's in Computer Science at IIT Patna
+          Master&apos;s in Computer Science at IIT Patna
         </HighlightedText>
         .
       </StyledPara>
 
       <StyledPara>
-        I'm passionate about exploring new ideas, building cool things, and
+        I&apos;m passionate about exploring new ideas, building cool things, and
         tackling tough challenges.
       </StyledPara>
 
       <StyledPara>
-        When I'm not diving into code, you'll probably find me watching Sci-Fi
-        movies, getting lost in comic books, or hitting the badminton court.{' '}
+        When I&apos;m not diving into code, you&apos;ll probably find me
+        watching Sci-Fi movies, getting lost in comic books, or hitting the
+        badminton court.{' '}
       </StyledPara>
       <StyledPara>
-        Feel free to connect &#x2E3A; I'm always up for a good chat!
+        Feel free to connect &#x2E3A; I&apos;m always up for a good chat!
       </StyledPara>
     </StyledMain>
   );

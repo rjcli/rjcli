@@ -6,13 +6,13 @@ import {
 
 export const academics: AcademicsObj[] = [
   {
-    date: '2023 - Present',
+    date: 'July 2023 - June 2025',
     title: 'Master in Computer Science & Engineering',
     description: ['Indian Institute of Technology, Patna, Bihar.'],
     color: '#1b5f8c',
   },
   {
-    date: '2018 - 2022',
+    date: 'Aug 2018 - May 2022',
     title: 'Bachelors in Computer Science & Engineering',
     description: [
       'Beant College of Engineering and Technology, Gurdaspur, Punjab.',

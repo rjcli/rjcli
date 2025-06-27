@@ -1,9 +1,10 @@
-import { lazy, Suspense, FC } from 'react';
+import { lazy, Suspense, type FC } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 import GlobalStyle from './assets/styles/GlobalStyles.ts';
 import ResetStyle from './assets/styles/ResetStyles.ts';
 import { ScreenSizeProvider } from './context/ScreenSizeContext.tsx';
+import Header from './components/Header.tsx';
 
 const SpinnerFullPage = lazy(() => import('./components/SpinnerFullPage.tsx'));
 const Root = lazy(() => import('./pages/Root.tsx'));
@@ -21,6 +22,7 @@ const App: FC = () => {
       <GlobalStyle />
       <ResetStyle />
       <ScreenSizeProvider>
+        <Header />
         <Suspense fallback={<SpinnerFullPage />}>
           <Routes>
             <Route element={<Root />}>

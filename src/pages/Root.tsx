@@ -1,7 +1,6 @@
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
-import Header from '../components/Header.tsx';
 import { useScreenSize } from '../context/useScreenSize.ts';
 
 const StyledButton = styled.button<{ $isSmallScreen: boolean }>`
@@ -26,7 +25,6 @@ const Root = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { isSmallScreen } = useScreenSize();
-  console.log(isSmallScreen);
 
   const handleShowResume = () => {
     navigate('/resume');
@@ -34,7 +32,6 @@ const Root = () => {
 
   return (
     <>
-      <Header />
       <Outlet />
       {location.pathname !== '/resume' && (
         <StyledButton onClick={handleShowResume} $isSmallScreen={isSmallScreen}>

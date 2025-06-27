@@ -23,7 +23,7 @@ const PageNotFound = () => {
         isCentered={false}
         style={{ fontSize: '2rem' }}
       >
-        The Route you request doesn't exist. <br />
+        The Route you request doesn&lsquo;t exist. <br />
         Looks like you are lost. <br />
       </StyledSubHeader>
 

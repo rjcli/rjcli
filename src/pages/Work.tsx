@@ -33,7 +33,11 @@ const Work = () => {
 
       <StyledPara className='center' style={{ fontSize: '1.5rem' }}>
         Looking for more of my work? Visit my{' '}
-        <a href='https://github.com/rjcli?tab=repositories' target='_blank'>
+        <a
+          href='https://github.com/rjcli?tab=repositories'
+          target='_blank'
+          rel='noreferrer'
+        >
           GitHub
         </a>
         .
