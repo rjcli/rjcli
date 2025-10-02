@@ -78,11 +78,10 @@ const About = () => {
       </SubHeader>
 
       <StyledPara>
-        I&apos;m an <HighlightedText>Ex-SDE Intern at Intel</HighlightedText>{' '}
-        and completed{' '}
+        I&apos;m a{' '}
         <HighlightedText>
-          Master&apos;s in Computer Science at IIT Patna
-        </HighlightedText>
+          Senior Software Engineer I at HCLSoftware
+        </HighlightedText>{' '}
         .
       </StyledPara>
 

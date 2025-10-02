@@ -35,6 +35,14 @@ export const academics: AcademicsObj[] = [
 
 export const experiences: ExperienceObj[] = [
   {
+    date: 'Sept 2025 - Present',
+    title: 'Senior Software Engineer I at HCLSoftware',
+    description: [
+      'Recently joined the team and currently onboarding. Excited to contribute to impactful projects and collaborate with talented colleagues.',
+    ],
+    color: '#7e57c2',
+  },
+  {
     date: 'June 2024 - May 2025',
     title: 'Intern at Intel',
     description: [
